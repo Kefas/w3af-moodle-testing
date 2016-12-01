@@ -1,0 +1,153 @@
+\chapter{Testy systemu}
+\label{cha;testySystemu}
+
+Zostały przeprowadzone manualne testy aplikacyjne, które zweryfikowały czy powstała aplikacja spełnia postawione mu wymagania. Oprócz testów manualnych zostały wykonane również testy behawioralne napisane we frameworku RSpec. Testy behawioralne zostały napisane zgodnie z metodyką  TDD (Test Driven Development). Wymagania, które zostały przetestowane na działającym serwisie to:
+\begin{itemize}
+\item niezawodność,
+\item intuicyjność interfejsu,
+\item bezpieczeństwo danych,
+\item odporność na nieautoryzowany dostęp do danych.
+\end{itemize}
+Oprócz sprawdzenia czy system spełnia postawione przed nim wymagania, przetestowane zostały również funkcjonalności wyspecyfikowane w rozdziale 2. \textit{Analiza wymagań}
+
+\section{Scenariusze testowania}
+Najważniejsze funkcjonalności systemu były przetestowane wzorując się na poniższych scenariuszach:
+ \begin{enumerate}
+ \item Rejestracja
+ \begin{itemize}
+ \item Warunki początkowe:
+ \begin{itemize}
+ \item W sesji przeglądarki nie znajduję się sesja należąca do żadnego użytkownika
+ \end{itemize}
+ \item Kroki testowe:
+ \begin{enumerate}
+ \item Naciśnięcie przycisku \textbf{Registration} - w odpowiedzi powinno pojawić się dodatkowe okno z formularzem rejestracji.
+ \item Wprowadzenie niepoprawnych danych takich jak:
+ \begin{itemize}
+ \item Brak któregokolwiek z atrybutów formularza
+ \item Niepoprawny adres mailowy
+ \item Adres mailowy jest już wykorzystany
+ \item Zbyt krótkie hasło
+ \end{itemize}
+ Spowoduje błąd walidacji formularza w skutek czego, użytkownik zostanie poinformowany o przyczynie niepowodzenia. Pola formularza oprócz hasła powinny pozostać niezmienione.
+ \item Wprowadzenie poprawnych danych skutkuje utworzeniem profilu użytkowniku w aplikacji oraz automatycznym zalogowanie użytkownika do aplikacji.
+ \end{enumerate}
+ \end{itemize}
+
+ \item Logowanie 
+  \begin{itemize}
+   \item Warunki początkowe:
+    \begin{itemize}
+     \item W sesji przeglądarki nie znajduje się sesja należąca do żadnego użytkownika
+     \item Istnieje co najmniej jeden profil użytkownika
+    \end{itemize}
+   \item Kroki testowe:
+    \begin{enumerate}
+     \item Naciśnięcie przyscisku \textbf{Login} - w odpowiedzi powinno pojawić się dodatkowe okno z formularzem logowania
+     \item Wprowadzenie niepoprawnych danych takich jak:
+      \begin{itemize}
+       \item Brak adresu mailowego lub hasła
+       \item Adres mailowy niewystępujacy w bazie danych
+       \item Hasło nie pasujące do podanego adresu mailowego
+      \end{itemize}
+      Spowoduje błąd walidacji formularza, w skutek czego, użytkownik zostanie poinformowany o przyczynie niepowodzenia. Pole adresu mailowego powinno zostać niezmienione.
+     \item Wprowadzenie poprawnych danych skutkuje zalogowaniem użytkownika dla aplikacji oraz dodaniem do ciasteczek obiektu z informacją o sesji użytkownika.
+    \end{enumerate}
+  \end{itemize}
+
+ \item Dodawanie oferty
+  \begin{itemize}
+   \item Warunki poczatkowe:
+    \begin{itemize}
+     \item Użytkownik jest zalogowany do systemu
+    \end{itemize}
+   \item Kroki testowe:
+    \begin{enumerate}
+     \item Naciśnięciu przycisku \textbf{Add offer} - w odpowiedzi powinno pojawić się dodatkowe okno z formularzem tworzenia nowej oferty
+     \item Wprowadzenie nieporawnych danych spowoduje błąd walidacji oraz wyświetlenie odpowiednich komunikatów o przyczynie niepowodzenia walidacji
+     \item Wprowadzenie poprawnych danych oraz naciśnięcie przycisku \textbf{Submit} powoduje przejście do następnego okna zawierającego formularz dodawania zdjęć.
+     \item Wybranie przycisku dodawania zdjęcia powinno otworzyć okno z systemową przeglądarką plików.
+     \item Naciśnięcie przycisku \textbf{Submit} spowoduje próbę zapisu zdjęcia - jeżeli format pliku nie należy do obsługiwanych przez aplikację, zdjęcie nie zostanie dodane. W przeciwnym wypadku zapis zdjęcia zakończy się powodzeniem oraz przejściem do formularza dodania lokalizacji.
+     \item Wybranie przycisku \textbf{Create another} spowoduję zapisanie zdjęcia przy zachowaniu warunków podanych powyżej. Następnie wróci do formularza dodawnia zdjęcia, wyświetlając już dodane zdjęcia.
+     \item W formularzu oferty należy zaznaczyć pozycję na mapie oraz podać dokładny adres w przeciwnym wypadku użytkownik powinien zostać poinformowany o przyczynach braku sukcesu po kliknięciu przycisku \textbf{Submit}
+     \item Jeżeli wszystkie dane w formularzu lokalizacji są walidowalne, oferta powinna zostać utworzona. Na mapie powinien się natychmiast pojawić znacznik odpowiadający lokalizacji danej oferty.
+    \end{enumerate}
+  \end{itemize}
+
+ \item Wyświetlanie oferty
+  \begin{itemize}
+   \item Warunki początkowe:
+    \begin{itemize}
+     \item W aplikacji istnieje co najmniej jedna oferta.
+    \end{itemize}
+   \item Kroki testowe:
+    \begin{enumerate}
+     \item Naciśnięcie znacznika na mapie reprezentującego ofertę
+     \item Użytkownik powinien zaobserwować pojawienie się nowego okna wypełnionego danymi oferty
+     \item Użytkownik do którego należy dane ogłoszenie powinien (będąc zalogowanym) widzieć opcję edycji ogłoszenia.
+     \item Zalogowany użytkownik do którego nie należy dane ogłoszenie powinien mieć możliwość dodania oferty do obserwowanych ofert.
+     \item Użytkownik zarejestrowany i niezarejestrowany powinien mieć możliwość zamknięcia oferty klikając na krzyżyk znajdujący się w prawym górnym rogu lub gdziekolwiek poza ofertą.
+    \end{enumerate}
+  \end{itemize} 
+
+ \item Edycja oferty
+  \begin{itemize}
+   \item Warunki początkowe:
+    \begin{itemize}
+     \item Użytkownik jest zalogowany
+     \item W aplikacji istnieje co najmniej jedna oferta przypisana dla zalogowanego użytkownika
+    \end{itemize}
+   \item Kroki testowe:
+    \begin{enumerate}
+     \item Naciśnięcie znacznika na mapie reprezentującego ofertę
+     \item Użytkownik powinien zaobserwować pojawienie się nowego okna wypełnionego danymi oferty
+     \item Użytkownik do którego należy dane ogłoszenie powinien (będąc zalogowanym) widzieć opcję edycji ogłoszenia. Po naciśnięciu tego przycisku powinno pojawić się okno z formularzem służącym do edytowania informacji o ofercie.
+     \item Kliknięcie przycisku \textbf{Submit} w przypadku pozytywnej walidacji zapisuje zmiany i przenosi użytkownika do formularza edycji zdjęć. W przeciwnym wypadku użytkownik zostaje powiadomiony o przyczynie niepowodzenia walidacji.
+     \item Użytkownik może dodać kolejne zdjęcia lub usunąć już istniejące za pomocą przycisku w kształcie litery \textbf{X}.
+     \item Po skończeniu edycji użytkownik powinien zostać przeniesiony do formularza edycji lokalizacji.
+     \item Po naciśnięciu przycisku \textbf{Submit} oferta powinna zostać zaktualizowana lub w przypadku niepoprawnej walidacji, powinnny zostać wyświetlone odpowiednie informacje o przyczynach niepowodzenia walidacji. W przypadku poprawnego zakończenia procesu walidacji oraz zapisywania formularz edycji powinien się  zamknąć, a znacznik oferty na mapie powinien udostępniać zakutalizowane dane.
+    \end{enumerate}
+  \end{itemize} 
+
+ \item Zapisanie filtrów
+  \begin{itemize}
+   \item Warunki początkowe:
+    \begin{itemize}
+     \item Użytkownik jest zalogowany
+     \item Istnieje co najmniej jedna oferta (warunek konieczny do zweryfikowania działania filtrów)
+    \end{itemize}
+   \item Kroki testowe:
+    \begin{enumerate}
+     \item Zalogowany użytkownik powinien widzieć na dole panelu z filtrami opcję zapisania filtrów. Po klinięciu przycisku użytkownik powinien zostać poinformowany o wyniku procesu zapisywania filtrów.
+     \item Użytkownik po wylogowaniu i ponownym zalogowaniu do aplikacji powinien mieć filtry w takim samym stanie jak w momencie zapisu.
+     \item Ponowne zapisanie filtrów powoduje nadpisanie poprzednich zapisanych fitrów.
+     \item Po usunięciu zapisanych filtrów użytkownik powinien mieć filtry ustawione w pozycji domyślnej 
+    \end{enumerate}
+  \end{itemize}
+
+ \item Zliczanie wyświetleń oferty
+  \begin{itemize}
+   \item Warunki początkowe:
+    \begin{itemize}
+     \item Istnieje co najmniej jedna oferta
+    \end{itemize}
+   \item Kroki testowe:
+    \begin{enumerate}
+     \item Należy otworzyć ofertę, zanotować aktualną liczbę wyświetleń, zamknąć ofertę.
+     \item Po ponownym otwarciu oferty liczba wyświetleń powinna się zwiększyć o jeden (lub o co najmniej jeden w przypadku testowania aplikacji na środowisku produkcyjnym).
+    \end{enumerate}
+  \end{itemize}
+\end{enumerate}
+
+\section{Realizacja testów}
+Relizacja testów jest oparta o framework RSpec, który został stworzony na potrzeby testowania kodu napisanego w języku Ruby. RSpec udostępnia mechanizmy ułatwiające proces testowania takie jak fabryki obiektów, fabryki losowych danych. Z czasem framework został dostosowany również do testowania frameworku Rails. Testy składają  się z testów:
+\begin{itemize}
+\item jednostkowych,
+\item funkcjonalnych.
+\end{itemize}
+Testy jednostkowe służą do sprawdzania możliwie najmniejszych fragmentów kodu. Przykladem testu jednostkowego jest sprawdzenie czy metoda sprawdzająca przynależność oferty do użytkownika rzeczywiście działa zgodnie z założeniami w przypadku danych wejściowych dających poprawne i niepoprawne rezultaty. Funkcje są sprawdzane również pod kątem odporności na błędne dane wejściowe takie jak złe typy, brak wartości. W takich przypadkach funkcjonalność sprawdza, czy został wyrzucony wyjątek jeżeli tak została funkcja zaprojektowana, czy też wyjątek został poprawnie obsłużony wewnątrz funkcji. Testy jednostkowe są bardzo pożyteczne w trakcie tworzenia oprogramowania, gdyż od samego początku umożliwiają wykrycie niepożądanych zachowań\\
+\\
+Testy funkcjonalne służą do sprawdzenie poprawości całych funkcjonalności takich jak logowanie czy rejestracja. Testowanie odbywa się na podstawie wymagań jakie dana funkcjonalność powinna spełniać. Testy te, są szczególnie przydatne przy procesie rozwijania oprogramowania, dodawnia nowych funkcjonalności. Wykonując te testy można się upewnić, że żadna funkcjonalność nie została naruszona podczas tworzenia innych fragmentów kodu.
+
+\section{Analiza wyników testów}
+Testy zostały przeprowadzone tylko dla części back-endowej z uwagi na brak możliwości przetestowania części front-endowej za pomocą frameworka RSpec. Zakładając, że wszystkie napisane testy w poprawny sposób testują funkcjonalności, aplikacja została przetestowana niemalże całkowicie. Wszystkie napisane testy dają wynik pozytywny przy jednoczesnym braku niedeterminizmu.

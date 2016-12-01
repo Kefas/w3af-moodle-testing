@@ -1,0 +1,15 @@
+\chapter{Podsumowanie}
+\label{cha:podsumowanie}
+
+Poniższy rozdział zawiera podsumowanie pracy nad projektem oraz implementacją. Zostały tu zawarte wnioski wyciagnięte podczas trwania prac nad aplikacją oraz przedstawione są możliwości dalszego jej rozwoju.
+
+\section{Wnioski}
+W ramach tej pracy inżynierskiej została przygotowana aplikacja służąca do zamieszczania i łatwego wyszukiwania ofert nieruchomości. Wykonana aplikacja jest wynikiem wielu procesów, które musiały zostać zrealizowane. W pierwszej kolejności konieczne było zaznajomienie się z zagadnieniem oraz przeglądnięcie podobnych serwisów. Następnie, niezbędnym elementem była analiza wymagań, która została przeprowadzona opierając się na doświadczeniach wyniesionych z poprzedniego etapu oraz na własnej kreatywności. W kolejnych etapach pracy został zrealizowany konkretny projekt systemu, właczając w to opis funkcjonalności, konkretnych obiektów. Ważnym elementem tworzenia aplikacji były testy przeprowadzane metodą TDD. Pozwoliło to na uniknięcie błędów, które mogłyby być, trudne do naprawienia przy implementacji innych funkcjonalności. Sumą  tych wszystkich składników jest kompletna i działająca aplikacja realizująca wyspecyfikowane zadania.\\
+Problemy, które zostały napotkane w trakcie pisania pracy to:
+\begin{itemize}
+\item Zabezpieczenie treści przed niepowołanym odczytem - bezpieczeństwo aplikacji zostało opisane w sekcji \quotes{Autoryzacja i autentykacja} \ref{sec:autoryzacjaAutentykacja}
+\item Wydajne filtrowanie logicznych atrybutów ofert - zostało to rozwiązane za pomocą sprawdzania zawierania się zbiorów zmiennych pochodzących z filtrów oraz z oferty.
+\end{itemize}
+
+\section{Możliwość rozwoju}
+Aplikacja została napisana w sposób, który umożliwa jej dalsze rozszerzanie. Jedną z możliwości rozwoju, która bardzo znacząco poprawiłaby jakość serwisu, byłaby możliwość przeszukiwania ofert mieszkań w sieci internetowej i zapisywanie ich do aplikacji. Jest to zadanie jednakże trudne, gdyż wiele ofert w sieci nie posiada zbyt szczegółowych informacji oraz jest zapisana w wielu różnych formatach oraz konwencjach. Kolejnym naturalnym krokiem rozwoju aplikacji byłoby stworzenie aplikacji mobilnej, gdyż wiele osób, zwłaszcza młodych, więcej czasu spędza korzystając z urządzeń mobilnych niż z tradycyjnego komputera lub laptopa.
