@@ -1,3 +1,15 @@
-\chapter{Projekt systemu}
-\label{cha:analizaAplikacji}
+\chapter{Testy}
+\label{cha:testy}
 
+Poniżej prezentujemy testy jakie przeprowadzliśmy wraz z ich krótkim opisem oraz niezbędnymi zmianami w kodzie oraz komentarzem odnoszącym się do rezultatów otrzymywanych z w3af.
+
+\section{Click-Jacking}
+\begin{enumerable}
+\item Opis podatności\\
+CLick-Jacking to złośliwa technika nakłaniające użytkowników do klikania w inne rzeczy niż oni sami myślą, że klikają.
+Może dojść do potencjalnego ujawnienia poufnych inforamcji lub przejęcia kontroli nad ich komputerem, po kliknięciu na pozornie niewinną stronę. Click-jacking przybiera też formę wbudowanego kodu lub skryptu, który może został wywołany bez wiedzy użytkownika.
+\item Zmiany w kodzie\\
+Nie były wymagane w przypadku tej podatności.
+\item Komentarz\\
+W3AF podczas pierwszego uruchomienia, bez zmian w kodzie, wykrył podatność aplikacji Moodle na brak zabezpieczeń przed ata
+\end{enumerable}
