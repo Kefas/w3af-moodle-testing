@@ -201,6 +201,8 @@ INPUT rozdzial1.aux
 INPUT rozdzial1.aux
 INPUT rozdzial2.aux
 INPUT rozdzial2.aux
+INPUT rozdzial3.aux
+INPUT rozdzial3.aux
 OUTPUT praca.aux
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/t1ptm.fd
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/t1ptm.fd
@@ -325,6 +327,18 @@ INPUT ./pictures/target.png
 OUTPUT rozdzial2.aux
 INPUT rozdzial2.tex
 INPUT rozdzial2.tex
+OUTPUT rozdzial3.aux
+INPUT rozdzial3.tex
+INPUT rozdzial3.tex
+INPUT pictures/clickjacking.png
+INPUT ./pictures/clickjacking.png
+INPUT ./pictures/clickjacking.png
+INPUT pictures/csrf.png
+INPUT ./pictures/csrf.png
+INPUT ./pictures/csrf.png
+INPUT pictures/sqli.png
+INPUT ./pictures/sqli.png
+INPUT ./pictures/sqli.png
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
 INPUT praca.lof
@@ -337,6 +351,8 @@ INPUT rozdzial1.aux
 INPUT rozdzial1.aux
 INPUT rozdzial2.aux
 INPUT rozdzial2.aux
+INPUT rozdzial3.aux
+INPUT rozdzial3.aux
 INPUT praca.run.xml
 OUTPUT praca.run.xml
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
