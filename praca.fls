@@ -339,6 +339,15 @@ INPUT ./pictures/csrf.png
 INPUT pictures/sqli.png
 INPUT ./pictures/sqli.png
 INPUT ./pictures/sqli.png
+INPUT pictures/xss_error_code_change.png
+INPUT ./pictures/xss_error_code_change.png
+INPUT ./pictures/xss_error_code_change.png
+INPUT pictures/xss_log_error.png
+INPUT ./pictures/xss_log_error.png
+INPUT ./pictures/xss_log_error.png
+INPUT pictures/xss_results.png
+INPUT ./pictures/xss_results.png
+INPUT ./pictures/xss_results.png
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
 INPUT praca.lof

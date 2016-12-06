@@ -9,3 +9,6 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Wyniki W3AF dotycz\IeC {\k a}ce clickjackingu\relax }}{14}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Wyniki W3AF dotycz\IeC {\k a}ce cross site request forgery\relax }}{14}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Wyniki W3AF z bazy wiedzy na temat sql injection\relax }}{15}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Wyniki W3AF z log\IeC {\'o}w - wykryta podatno\IeC {\'s}\IeC {\'c}\relax }}{16}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Wyniki W3AF z log\IeC {\'o}w - wykryta podatno\IeC {\'s}\IeC {\'c}\relax }}{16}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Wyniki W3AF z bazy wiedzy na temat xss\relax }}{17}

@@ -39,6 +39,16 @@ W3AF znalazł podatność na CSRF podczas pierwszego uruchomienia testów:
 \end{minipage}
 \end{enumerate}
 
+\noindent
+\begin{minipage}{\linewidth}
+\makebox[\linewidth]{
+  \includegraphics[keepaspectratio=true,scale=0.3]{pictures/csrf_result2.png}}
+\captionof{figure}{Wyniki W3AF dotyczące cross site request forgery (GUI)}\label{erd}
+\end{minipage}
+\end{enumerate}
+
+
+
 
 %--------------------------------------
 
@@ -55,5 +65,41 @@ W3AF, a konkretnie plugin blind\_sqli znalazł podatność na CSRF podczas pierw
 \makebox[\linewidth]{
   \includegraphics[keepaspectratio=true,scale=0.3]{pictures/sqli.png}}
 \captionof{figure}{Wyniki W3AF z bazy wiedzy na temat sql injection}\label{erd}
+\end{minipage}
+\end{enumerate}
+
+\section{XSS}
+
+\begin{enumerate}
+\item Opis podatności\\
+ Sposób ataku na serwis WWW polegający na osadzeniu w treści atakowanej strony kodu (zazwyczaj JavaScript), który wyświetlony innym użytkownikom może doprowadzić do wykonania przez nich niepożądanych akcji. Skrypt umieszczony w zaatakowanej stronie może obejść niektóre mechanizmy kontroli dostępu do danych użytkownika.
+
+\item Zmiany w kodzie\\
+Zmieniliśmy plik calendar view.php. Przeprowadzone zmiany miały na celu ekspozycję jednego z parametrów.
+
+\noindent
+\begin{minipage}{\linewidth}
+\makebox[\linewidth]{
+  \includegraphics[keepaspectratio=true,scale=0.5]{pictures/xss_error_code_change.png}}
+\captionof{figure}{Wyniki W3AF z logów - wykryta podatność}\label{erd}
+\end{minipage}
+\end{enumerate}
+
+\item Komentarz\\
+W3AF znalazł podatność na atak XSS:
+
+\noindent
+\begin{minipage}{\linewidth}
+\makebox[\linewidth]{
+  \includegraphics[keepaspectratio=true,scale=0.3]{pictures/xss_log_error.png}}
+\captionof{figure}{Wyniki W3AF z logów - wykryta podatność}\label{erd}
+\end{minipage}
+\end{enumerate}
+
+\noindent
+\begin{minipage}{\linewidth}
+\makebox[\linewidth]{
+  \includegraphics[keepaspectratio=true,scale=0.3]{pictures/xss_results.png}}
+\captionof{figure}{Wyniki W3AF z bazy wiedzy na temat xss}\label{erd}
 \end{minipage}
 \end{enumerate}
