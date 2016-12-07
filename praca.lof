@@ -4,11 +4,23 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Opcje W3AF do wyboru\relax }}{8}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces R\IeC {\'o}\IeC {\.z}norodno\IeC {\'s}\IeC {\'c} plugin\IeC {\'o}w do wyboru\relax }}{9}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Konfiguracja celu atak\IeC {\'o}w\relax }}{9}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Konfiguracja w3af\relax }}{9}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Profile oraz dost\IeC {\k e}pne pluginy\relax }}{10}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Moodle - panel g\IeC {\l }\IeC {\'o}wny\relax }}{12}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Moodle - dost\IeC {\k e}pne kursy\relax }}{12}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Wyniki W3AF dotycz\IeC {\k a}ce clickjackingu\relax }}{14}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Wyniki W3AF dotycz\IeC {\k a}ce cross site request forgery\relax }}{14}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Wyniki W3AF z bazy wiedzy na temat sql injection\relax }}{15}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Wyniki W3AF z log\IeC {\'o}w - wykryta podatno\IeC {\'s}\IeC {\'c}\relax }}{16}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Wyniki W3AF z log\IeC {\'o}w - wykryta podatno\IeC {\'s}\IeC {\'c}\relax }}{16}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Wyniki W3AF z bazy wiedzy na temat xss\relax }}{17}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Wyniki W3AF z log\IeC {\'o}w - wykryta podatno\IeC {\'s}\IeC {\'c}\relax }}{14}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Wyniki W3AF z log\IeC {\'o}w - wykryta podatno\IeC {\'s}\IeC {\'c}\relax }}{14}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Wyniki W3AF z bazy wiedzy na temat xss\relax }}{15}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Wyniki W3AF z bazy wiedzy na temat sql injection\relax }}{15}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Znalezione podatno\IeC {\'s}ci na guessabe_credentials.\relax }}{16}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Log W3AF na temat wykrytych podatno\IeC {\'s}ci.\relax }}{16}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Opis pierwszej wykrytej podatno\IeC {\'s}ci\relax }}{16}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Opis drugiej wykrytej podatno\IeC {\'s}ci\relax }}{16}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Wyniki W3AF dotycz\IeC {\k a}ce clickjackingu\relax }}{17}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Wyniki W3AF dotycz\IeC {\k a}ce cross site request forgery\relax }}{17}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Wyniki W3AF dotycz\IeC {\k a}ce cross site request forgery (GUI)\relax }}{18}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Log dotycz\IeC {\k a}cy podatno\IeC {\'s}ci na security misconfiguration\relax }}{18}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Wykryte podatno\IeC {\'s}ci na security misconfiguration\relax }}{19}
+\addvspace {10\p@ }
